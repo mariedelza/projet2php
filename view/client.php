@@ -60,8 +60,8 @@ if (!empty($_GET['id'])) {
                             <td><?= $value['prenom'] ?></td>
                             <td><?= $value['telephone'] ?></td>
                             <td><?= $value['adresse'] ?></td>
-                            <td><a href="?id=<?= $value['id'] ?>"><button class="btn  btn-outline-warning">modifier</button></a></td>
-                            <td> <button class="btn  btn-outline-danger">supprimer</button></td>
+                            <td><a href="?id=<?= $value['id'] ?>"><button class="btn  btn-warning">modifier</button></a></td>
+                            <td><a href="?id=<?= $value['id'] ?> <button class="btn  btn-danger">supprimer</button></td>
                         </tr>
 
                     </tbody>

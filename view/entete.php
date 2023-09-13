@@ -17,7 +17,7 @@ include_once "../model/function.php";
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 
 
-    <link rel="stylesheet" href="../public/css/styles.css">
+    <link rel="stylesheet" href="../public/css/style.css">
 </head>
 
 <body>
@@ -67,20 +67,12 @@ include_once "../model/function.php";
                         <span class="material-icons-outlined">groups</span> Clients
                     </a>
                 </li>
-                <li class="sidebar-list-item">
-                    <a href="commande.php" target="_blank">
-                        <span class="material-icons-outlined">fact_check</span> Commande
-                    </a>
-                </li>
+               
                 <li class="sidebar-list-item">
                     <a href="fournisseur.php" target="_blank">
                         <span class="material-icons-outlined">poll</span> Fournisseur
                     </a>
                 </li>
-                <li class="sidebar-list-item">
-                    <a href="#" target="_blank">
-                        <span class="material-icons-outlined">settings</span> Settings
-                    </a>
-                </li>
+                
             </ul>
         </aside>

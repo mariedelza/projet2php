@@ -102,10 +102,8 @@ $ventes = $req->fetchAll(PDO::FETCH_ASSOC);
                         <td><?= $vente['quantitee'] ?></td>
                         <td><?= $vente['prix'] ?></td>
                         <td><?= $vente['date_vente'] ?></td>
-                        <td>
-                            <a href="recuVente.php?id=<?= $value['id']?>"><i class="fa-solid fa-file-invoice">imprimer</i></a>
-
-                        </td>
+                        <td><a href="?id=<?= $value['id'] ?>"><button class="btn  btn-outline-warning">Modifier</button></a></td>
+                                                    <td><button class="btn  btn-outline-danger">supprimer</button></td>
 
                     </tr>
                 <?php endforeach; ?>

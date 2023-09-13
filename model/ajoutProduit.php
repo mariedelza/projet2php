@@ -65,9 +65,9 @@ if (
 } else {
     // Messages d'erreur pour les conditions non satisfaites
     if (empty($_POST['nom_produit'])) {
-        $_SESSION['message']['text'] = "Le nom du produit est requis";
+        $_SESSION['message']['text'] = "Le nom du produit est obligatoire";
     } elseif (empty($_POST['categorie'])) {
-        $_SESSION['message']['text'] = "La catégorie du produit est requise";
+        $_SESSION['message']['text'] = "La catégorie du produit est obligatoire";
     } elseif (!isset($_POST['quantitee']) || !is_numeric($_POST['quantitee']) || $_POST['quantitee'] < 0) {
         $_SESSION['message']['text'] = "La quantité du produit doit être un nombre positif";
     } elseif (!isset($_POST['prix_unitaire']) || !is_numeric($_POST['prix_unitaire']) || $_POST['prix_unitaire'] < 0) {

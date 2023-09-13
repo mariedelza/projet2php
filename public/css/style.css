@@ -142,7 +142,7 @@ body {
 }
 
 .card:nth-child(4) {
-  background-color: #d50000;
+  background-color: #d50099;
 }
 
 .card-inner {
@@ -163,19 +163,42 @@ body {
 }
 
 .charts-card {
-  background-color: #263043;
   margin-bottom: 20px;
   padding: 25px;
   box-sizing: border-box;
-  -webkit-column-break-inside: avoid;
-  border-radius: 5px;
-  box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+  
 }
 
 .chart-title {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 50px;
+}
+.topic{
+  list-style: none;
+  margin-top: 5vh;
+  font-size: 30px;
+  color:black;
+  font-weight: 700;
+  background-color:#d50099;
+  border-radius: 5px;
+  
+}
+.sales-details{
+  display:flex ;
+  justify-content: space-around;
+  align-items: center;
+}
+.sales-details a{
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+.sales-details li{
+  list-style: none;
+  margin-top: 15px;
+  font-size: 20px;
 }
 
 /* ---------- MEDIA QUERIES ---------- */
@@ -243,11 +266,9 @@ body {
   margin-top: 20px;
   margin-left: 30vh;
   justify-content: center;
-  background-color: #4d4a4a;
   padding: 15px 14px;
   min-width: calc(100% / 4 -10px);
-  border-radius: 12px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  
 }
  input,
  textarea,
@@ -306,7 +327,7 @@ form{
 }
 
 .alert.warning{
-  background-color: #ff6d00;
+  background-color:#FF6666;
 }
 /* css du tableau du formulaire */
 .table{

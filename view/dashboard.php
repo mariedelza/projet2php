@@ -13,23 +13,23 @@ include 'entete.php';
                 <h3>Produits</h3>
                 <span class="material-icons-outlined">inventory_2</span>
             </div>
-            <h1>249</h1>
+            <h1><?php echo getAllProduct()['nbre']; ?></h1>
         </div>
 
         <div class="card">
             <div class="card-inner">
-                <h3>Ventes</h3>
+                <h3>Vente</h3>
                 <span class="material-icons-outlined">category</span>
             </div>
-            <h1>25</h1>
+            <h1><?php echo getAllVente()['nbre']; ?></h1>
         </div>
 
         <div class="card">
             <div class="card-inner">
-                <h3>Commandes</h3>
-                <span class="material-icons-outlined">fact_check</span>
+                <h3>Clients</h3>
+                <span class="material-icons-outlined">groups</span>
             </div>
-            <h1>1500</h1>
+            <h1><?php echo getAllClient()['nbre']; ?></h1>
         </div>
 
         <div class="card">
@@ -37,26 +37,98 @@ include 'entete.php';
                 <h3>Fournisseur</h3>
                 <span class="material-icons-outlined">poll</span>
             </div>
-            <h1>56</h1>
+            <h1><?php echo getAllFouriseur()['nbre']; ?></h1>
         </div>
 
     </div>
 
-    <div class="charts">
 
-        <div class="charts-card">
-            <h2 class="chart-title">Top 5 Products</h2>
-            <div id="bar-chart"></div>
+
+    <div class="charts-card">
+        <h2 class="chart-title">Les ventes les plus récentes</h2>
+        <?php
+        $product = getLastVente();
+        ?>
+        <div class="sales-details">
+            <ul class="details">
+                <li class="topic">Date</li>
+                <?php
+                foreach ($product as $value) {
+                ?>
+                    <li><a href="#"><?php echo date('d M Y', strtotime($value['date_vente'])) ?></a></li>
+                <?php
+                }
+                ?>
+            </ul>
+            <ul class="details">
+                <li class="topic">Clients</li>
+                <?php
+                foreach ($product as $value) {
+                ?>
+                    <li><a href="#"><?php echo $value['nom'] . " " . $value['prenom'] ?></a></li>
+                <?php
+                }
+                ?>
+            </ul>
+            <ul class="details">
+                <li class="topic">Produits</li>
+                <?php
+                foreach ($product as $value) {
+                ?>
+                    <li><a href="#"><?php echo $value['nom_produit'] ?></a></li>
+                <?php
+                }
+                ?>
+            </ul>
+            <ul class="details">
+                <li class="topic">Prix</li>
+                <?php
+                foreach ($product as $value) {
+                ?>
+                    <li><a href="#"><?php echo number_format($value['prix'], 0, ",", "") . "F" ?></a></li>
+                <?php
+                }
+                ?>
+            </ul>
         </div>
-
-        <div class="charts-card">
-            <h2 class="chart-title">Purchase and Sales Orders</h2>
-            <div id="area-chart"></div>
-        </div>
-
     </div>
+
+    <div class="charts-card">
+        <h2 class="chart-title">Les produits les plus vendus</h2>
+        <?php
+        $products = getMostVente();
+        ?>
+        <div class="sales-details">
+            <ul class="details">
+                <li class="topic">Produits</li>
+                <?php
+                foreach ($products as $product) {
+                ?>
+                    <li><a href="#"><?php echo $product['nom_produit']; ?></a></li>
+                <?php
+                }
+                ?>
+            </ul>
+            <ul class="details">
+                <li class="topic">Prix total</li>
+                <?php
+                foreach ($products as $product) {
+                ?>
+                    <li><a href="#"><?php echo number_format($product['total_prix'], 0, ",", "") . "F" ?></a></li>
+                <?php
+                }
+                ?>
+            </ul>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
 </main>
-<!-- End Main -->
+
 
 </div>
 
