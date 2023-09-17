@@ -184,22 +184,7 @@ function getMostVente()
     }
 }
 
-// function DeleteClient($idc){
-//     $sql="DELETE FROM client WHERE idc=$idc";
-//     return executeSQL($sql);
-// }
 
 
 
-function DeleteClient($idc)
-{
-    if (!empty($idc)) {
-        $sql = "DELETE FROM client WHERE idc=$idc";
 
-        $req = $GLOBALS['connexion']->prepare($sql);
-
-        $req->execute(array($idc));
-
-        return $req->fetch();
-    } 
-}

@@ -41,6 +41,7 @@ if (!empty($_GET['id'])) {
         <table class="table">
             <thead>
                 <tr>
+                    <th scope="col">ID </th>
                     <th scope="col">Nom </th>
                     <th scope="col">Prenom</th>
                     <th scope="col">Telephone</th>
@@ -56,12 +57,13 @@ if (!empty($_GET['id'])) {
             ?>
                     <tbody>
                         <tr>
+                            <td><?= $value['id'] ?></td>
                             <td><?= $value['nom'] ?></td>
                             <td><?= $value['prenom'] ?></td>
                             <td><?= $value['telephone'] ?></td>
                             <td><?= $value['adresse'] ?></td>
                             <td><a href="?id=<?= $value['id'] ?>"><button class="btn  btn-warning">modifier</button></a></td>
-                            <td><a href="?id=<?= $value['id'] ?> <button class="btn  btn-danger">supprimer</button></td>
+                            <td><a href="../model/supprimer_client.php?id=<?= $value['id'] ?>"> <button class="btn  btn-danger" type="submit">supprimer</button></td>
                         </tr>
 
                     </tbody>

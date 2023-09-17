@@ -69,8 +69,9 @@ if (!empty($_GET['id'])) {
                             <td><?= $value['prix_unitaire'] ?></td>
                             <td><?= date('d/m/y H:i:s', strtotime($value['date_fabrication'])) ?></td>
                             <td><?= date('d/m/y H:i:s', strtotime($value['date_expiration'])) ?></td>
-                            <td><a href="?id=<?= $value['id'] ?>"><button class="btn  btn-outline-warning">Modifier</button></a></td>
-                            <td><button class="btn  btn-outline-danger">supprimer</button></td>
+                            <td><a href="?id=<?= $value['id'] ?>"><button class="btn  btn-warning">Modifier</button></a></td>
+                            <td><a href="../model/supprimer_produit.php?id=<?= $value['id'] ?>"> <button class="btn  btn-danger" type="submit">supprimer</button></td>
+
                         </tr>
 
                     </tbody>

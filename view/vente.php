@@ -90,7 +90,7 @@ $ventes = $req->fetchAll(PDO::FETCH_ASSOC);
                     <th scope="col">Quantitee</th>
                     <th scope="col">prix</th>
                     <th scope="col">Date</th>
-                    <th scope="col">Action</th>
+                  
                 </tr>
             </thead>
 
@@ -102,8 +102,7 @@ $ventes = $req->fetchAll(PDO::FETCH_ASSOC);
                         <td><?= $vente['quantitee'] ?></td>
                         <td><?= $vente['prix'] ?></td>
                         <td><?= $vente['date_vente'] ?></td>
-                        <td><a href="?id=<?= $value['id'] ?>"><button class="btn  btn-outline-warning">Modifier</button></a></td>
-                                                    <td><button class="btn  btn-outline-danger">supprimer</button></td>
+
 
                     </tr>
                 <?php endforeach; ?>
